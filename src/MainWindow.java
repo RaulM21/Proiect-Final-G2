@@ -188,7 +188,15 @@ public class MainWindow
                 });
             }
         });
+
+        reclamatiiBut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ReclamatiiForm form2=new ReclamatiiForm(); //am creat un obiect form de reclamatii
+                form2.setVisible();
             }
+        });
+    }
     private void refreshList()
     {
         lstLaptop.setListData(laptop.toArray());
