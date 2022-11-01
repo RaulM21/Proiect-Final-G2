@@ -143,7 +143,7 @@ public class MainWindow
                 frame2.setVisible(true);
 
                 JPanel panel2=new JPanel();
-                frame2.setSize(400,400);
+                frame2.setSize(870,200);
                 frame2.add(panel2);
 
                 JLabel label2= new JLabel("Numele de utilizator");

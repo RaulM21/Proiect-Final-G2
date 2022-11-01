@@ -1,10 +1,10 @@
 package BuyLaptop;
 
-public class Clienti
+public class Clienti implements IClienti
 {
-    protected String nume;
-    protected String prenume;
-    protected String email;
+    private String nume;
+    private String prenume;
+    private String email;
 
     public Clienti(String nume, String prenume, String email)
     {
