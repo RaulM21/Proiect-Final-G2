@@ -35,6 +35,8 @@ public class MainWindow
     private JTextField txtCauta;
     private JLabel lblCautaConfirm;
     private JLabel lblSpatiere;
+    private JButton butDate;
+    private JButton reclamatiiBut;
 
     public MainWindow()
     {
@@ -133,7 +135,60 @@ public class MainWindow
                 }
             }
         });
-    }
+        butDate.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                JFrame frame2=new JFrame("Autentificare");
+                frame2.setVisible(true);
+
+                JPanel panel2=new JPanel();
+                frame2.setSize(400,400);
+                frame2.add(panel2);
+
+                JLabel label2= new JLabel("Numele de utilizator");
+                label2.setBounds(10,20,100,30);
+                panel2.add(label2);
+
+                JTextField txtDate= new JTextField(30);
+                txtDate.setBounds(100,20,165,25);
+                panel2.add(txtDate);
+
+                JLabel lblParola= new JLabel("\nParola");
+                lblParola.setBounds(10,504,80,25);
+                panel2.add(lblParola);
+
+                JPasswordField txtParola= new JPasswordField(30);
+                panel2.add(txtParola);
+
+                JLabel lblReusit= new JLabel();
+                panel2.add(lblReusit);
+
+                JButton butAut = new JButton("Login");
+                butAut.setBounds(10,50,50,50);
+                panel2.add(butAut);
+                butAut.addActionListener(new ActionListener()
+                {
+                    @Override
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        String date=txtDate.getText();
+                        String parola=txtParola.getText();
+
+                        if (date.equals("raul") && parola.equals("raul123"))
+                            // lblReusit.setText("autentificare reusita");
+                            frame2.setVisible(false);
+                        else
+                            lblReusit.setText("Nume sau parola incorecta");
+
+
+                        txtDate.setText(null);
+                        txtParola.setText(null);
+                    }
+                });
+            }
+        });
+            }
     private void refreshList()
     {
         lstLaptop.setListData(laptop.toArray());
@@ -141,7 +196,7 @@ public class MainWindow
 
     public static void main(String[] args)
     {
-        JFrame frame = new JFrame("Aplicatie Proiect 2");
+        JFrame frame = new JFrame("Aplicatie Proiect Final");
 
         frame.setContentPane(new MainWindow().panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
