@@ -22,5 +22,5 @@ Ca referinta, asa arata fereastra principala :
 
 Diagrama UML a programului :
 
-![12345](https://user-images.githubusercontent.com/116735455/199324933-e8df5168-2c54-493f-90c9-e3c3e691b185.png)
+![image](https://user-images.githubusercontent.com/116735455/199488217-a0229d61-c84e-4d99-9ce8-05fd081b860d.png)
 
