@@ -1,6 +1,6 @@
 package BuyLaptop;
 
-public class Clienti implements IClienti
+abstract class Clienti implements IClienti
 {
     private String nume;
     private String prenume;
