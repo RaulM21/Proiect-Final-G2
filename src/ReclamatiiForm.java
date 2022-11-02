@@ -28,7 +28,7 @@ public class ReclamatiiForm extends MainWindow {
                     }
                     lblReclamatii.setText("Reclamatie introdusa cu succes.");
                 }
-                else lblReclamatii.setText("Campul nu poate fi gol.");
+                else JOptionPane.showMessageDialog(null,"Campul nu poate fi gol");
 
                 System.out.println("Scris cu succes.");
             }
